@@ -1,9 +1,8 @@
-Thu Jun  1 06:53:56 UTC 2023
-predictor.v:7: syntax error
-predictor.v:11: Syntax in assignment statement l-value.
-predictor.v:12: syntax error
-predictor.v:13: Syntax in assignment statement l-value.
-predictor.v:7: error: Incomprehensible case expression.
+Thu Jun  1 06:57:48 UTC 2023
+predictor.v:8: syntax error
+predictor.v:9: error: Incomprehensible case expression.
+predictor.v:14: syntax error
+predictor.v:15: error: Incomprehensible case expression.
 predictor.v:28: syntax error
 predictor.v:31: Syntax in assignment statement l-value.
 predictor.v:32: syntax error

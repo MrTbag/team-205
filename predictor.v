@@ -4,9 +4,9 @@ reg [1:0] state = 2'b00;
 always @(posedge clk) begin
 	if (result)
 	begin
-	case (state)
-	begin
+	case(state)
 	2'b00:
+	begin
 	if (taken)
 	state <= 2'b01;
 	else
@@ -25,6 +25,7 @@ always @(posedge clk) begin
 	state <= 2'b11;
 	else
 	state <= 2'b01;
+	end
 	2'b11:
 	begin
 	if (taken)
@@ -33,12 +34,12 @@ always @(posedge clk) begin
 	state <= 2'b10;
 	end
 	default: state <= 2'b00;
-end
+endcase
 	if (request)
 	begin
 	prediction <= state[1];
 	end
 	
 end		
-
+end
 endmodule

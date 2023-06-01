@@ -1,45 +1,44 @@
 module predictor(input wire request, result, clk, taken, output reg prediction);
 
-reg [1:0] state = 2'b00;
+reg [1:0] state = 2'b11;
 always @(posedge clk) begin
 	if (result)
 	begin
-	case(state)
-	2'b00:
+	switch(state):
+	case 2'b00:
 	begin
 	if (taken)
 	state <= 2'b01;
 	else
 	state <= 2'b00;
 	end
-	2'b01:
+	case 2'b01:
 	begin
 	if (taken)
 	state <= 2'b10;
 	else
 	state <= 2'b00;
 	end
-	2'b10:
+	case 2'b10:
 	begin
 	if (taken)
 	state <= 2'b11;
 	else
 	state <= 2'b01;
-	end
-	2'b11:
+	case 2'b11:
 	begin
 	if (taken)
 	state <= 2'b11;
 	else 
 	state <= 2'b10;
 	end
-	default: state <= 2'b00;
-endcase
+	default: state <= 2'b11;
+end
 	if (request)
 	begin
 	prediction <= state[1];
 	end
 	
 end		
-end
+
 endmodule

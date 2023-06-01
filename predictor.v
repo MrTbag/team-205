@@ -4,7 +4,7 @@ reg [1:0] state = 2'b00;
 always @(posedge clk) begin
 	if (result)
 	begin
-	case (state):
+	case (state)
 	begin
 	2'b00:
 	if (taken)

@@ -25,7 +25,7 @@ always @(posedge clk) begin
 	state <= 2'b11;
 	else
 	state <= 2'b01;
-	case 2'b11:
+	2'b11:
 	begin
 	if (taken)
 	state <= 2'b11;
